@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>ARTIST</title>
+
+</head>
+
+<body>
+  <h1>ARTIST</h1>
+  <div id="slideContainer" class="artist"></div>
+  <div id="calendar" class="Calendar">Calendar</div>
+
+  <div class="back" >
+      <a href="/" class="back" id="backBtn"><div>
+        BACK TO MAIN
+      </div></a> 
+  </div>
+</body>
+</html>
+
+<script> 
+  var artistPage = {{.}}
+  var artist = artistPage.artist
+  var searchQuery = artistPage.searchQuery
+  if (searchQuery && searchQuery != "") {
+    $("a").attr("href", "/?search-query=" + searchQuery)
+  }
+
+  str =  '<img src=' + artist.image +' class="image">'
+  str += '<h2 class="artist">Name - ' + artist.name +'</h2>'
+  str += '<h3 class="artist">Creation Date - ' + artist.creationDate +'</h2>'
+  str += '<h3 class="artist">First Album - ' + artist.firstAlbum +'</h2>'
+   str += '<h3 class="artistText">Members</h3>'
+    artist.members.forEach(element => {
+      str +=  '<li>'+ element + '</li>';
+    });
+
+  str += '<h3 id="calendarName"> Calendar </h3>'
+  var dict = artist.DatesLocations
+  var calendar = ''
+  for(var key in dict) {
+    var value = dict[key];
+    key = 'city: ' + key.toUpperCase().replace('-', ', country: ').replace('_', '-')
+    calendar += '<li class="calendar">' +key + ' - '
+      value.forEach((val, index)=>{
+        val = val.replaceAll('-', '.')
+        value.length - 1 == index ? calendar +=val : calendar +=val + '; '
+      })
+      calendar += '</li>'
+  }
+  document.getElementById("slideContainer").innerHTML = str;
+  document.getElementById("calendar").innerHTML = calendar;
+</script> 

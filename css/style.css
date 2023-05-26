@@ -1,0 +1,212 @@
+
+.images{
+	width: 100;
+	height: 150;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+.image{
+	width: 200;
+	height: 200;
+
+	align-items: center;
+	text-align: center;
+
+}
+.artist{
+	align-items: center;
+	text-align: center;
+}
+.button{
+	align-items: center;
+	text-align: center;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+body {
+	background-color: #212121;
+	color: #fff;
+	font-family: monospace, serif;
+	letter-spacing: 0.05em;
+  }
+
+  h1 {
+	font-size: 23px;
+	text-align: center;
+  }
+
+  h2 {
+	font-size: 20px;
+	text-align: center;
+  }
+
+  h3 {
+	font-size: 20px;
+	text-align: center;
+  }
+  .link{
+	font-size: 20px;
+	text-align: center;
+  }
+
+  .notFound{
+	align-items: center;
+	text-align: center;
+  }
+ #calendarName{
+	text-align: center;
+	padding-top: 20px;
+
+ }
+
+  #calendar{
+	text-align: center;
+  }
+  .calendar{
+	text-align: center;
+  }
+  .back{
+	color: #fff;
+	padding-top: 20px;
+	font-size: 20px;
+	text-align: center;
+  }
+  #loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	z-index: 9999;
+  }
+  
+  #loader p {
+	color: #000;
+	position: absolute;
+	font-size: 30px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+  #searchForm {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  
+  #searchInput {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid gray;
+    width: 20rem;
+    margin-right: 0.5rem;
+  }
+  
+  #searchInput:focus {
+    outline: none;
+    border: 1px solid blue;
+  }
+  
+  /* Style the search button */
+  button[type="submit"] {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: darkblue;
+  }
+  #filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #filters label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .creation-date, .album-date {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .creation-date .row, .album-date .row {
+    margin-right: 10px;
+  }
+  
+  .creation-date input[type=date], .album-date input[type=date], #location, #members {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    width: 100%;
+  }
+  
+  #locationForm {
+    margin: 0;
+  }
+  
+  .location input[type=text] {
+    width: 200px;
+  }
+  
+  .members {
+    display: flex;
+    align-items: center;
+  }
+
+  .top-elements {
+    display: flex;
+  }
+  .col-md-4 {
+    width: 30%;
+    margin-left: 1.5%;
+  }
+  .col-lg-12 {
+    width: 91.5%!important;
+    margin-left: 3%;
+  }
+  .bottom-element {
+    display: flex;
+    margin: auto;
+  }
+  @media screen and (max-width: 768px) {
+    .bottom-element {
+      display: block;
+    }
+    .top-elements {
+      display: block;
+    }
+    .col-md-4 {
+      width: 90%;
+      margin-left: 1.5%;
+    }
+    #searchInput {
+      width: 13rem
+    }
+    .search-group {  
+      margin-left: 7%;
+    }
+  }
+  
